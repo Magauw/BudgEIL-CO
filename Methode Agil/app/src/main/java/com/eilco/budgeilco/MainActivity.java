@@ -22,9 +22,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         budgetValue = findViewById(R.id.textViewValueB);
-        Intent intent = new Intent();
-        String Budget =  intent.getStringExtra("montantB");
+
+
+        String Budget =  getIntent().getStringExtra("montantB");
         budgetValue.setText(Budget);
+
         ajoutBud=findViewById(R.id.buttonAjoutB);
         ajoutBud.setOnClickListener(new View.OnClickListener() {
             @Override
