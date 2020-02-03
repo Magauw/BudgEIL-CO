@@ -17,9 +17,9 @@ public class DepenseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_depense);
 
-        Intent intent = new Intent();
 
-        String montant =  intent.getStringExtra("montant");
+
+        String montant =  getIntent().getStringExtra("montant");
 
         Depense depense = new Depense(Double.valueOf(montant), null);
 
