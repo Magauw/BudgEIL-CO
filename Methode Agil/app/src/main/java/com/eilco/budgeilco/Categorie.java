@@ -4,8 +4,11 @@ public class Categorie {
 
     private String nom;
 
-    public Categorie(String nom) {
+    private Double montantTotal;
+
+    public Categorie(String nom, Double montantTotal) {
         this.nom = nom;
+        this.montantTotal = montantTotal;
     }
 
     public String getNom() {
@@ -14,5 +17,13 @@ public class Categorie {
 
     public void setNom(String nom) {
         this.nom = nom;
+    }
+
+    public Double getMontantTotal() {
+        return montantTotal;
+    }
+
+    public void setMontantTotal(Double montantTotal) {
+        this.montantTotal = montantTotal;
     }
 }
