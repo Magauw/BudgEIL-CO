@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,39 +26,43 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         budgetValue = findViewById(R.id.textViewValueB);
 
-
-        String Budget =  getIntent().getStringExtra("montantB");
-        budgetValue.setText(Budget);
-
-        ajoutBud=findViewById(R.id.buttonAjoutB);
-        ajoutBud.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intentB = new Intent(getApplicationContext() , ajoutBudgetActivity.class);
-                startActivity(intentB);
-
+        //Definition des catégorie
         Categorie cat1 = new Categorie("Alimentation",0.0);
         Categorie cat2 = new Categorie("Loyer",0.0);
         Categorie cat3 = new Categorie("Loisir",0.0);
-        ajoutDep=findViewById(R.id.buttonAjoutD);
-        ajoutDep.setOnClickListener(new View.OnClickListener() {
-            @Override
-                Intent intentD = new Intent(getApplicationContext() , ajoutDepenseActivity.class);
-                startActivity(intentD);
-    }
-});
-            public void onClick(View v) {
-            }
-        });
 
         List<Categorie> categorieList = new ArrayList<>();
 
         categorieList.add(cat1);
         categorieList.add(cat2);
         categorieList.add(cat3);
+        //Definition de l'adapter recycler view
         RecyclerView myRecyclerView = findViewById(R.id.myRecyclerViewB);
         myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         myRecyclerView.setAdapter( new CategorieAdapter(categorieList));
 
+        String Budget =  getIntent().getStringExtra("montantB");
+        budgetValue.setText(Budget);
+
+        //Definition du bouton ajout dépenses
+        ajoutDep=findViewById(R.id.buttonAjoutD);
+        ajoutDep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentD = new Intent(getApplicationContext() , ajoutDepenseActivity.class);
+                startActivity(intentD);
+            }
+    });
+        //Definition du bouton ajout budget
+        ajoutBud=findViewById(R.id.buttonAjoutB);
+        ajoutBud.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentB = new Intent(getApplicationContext() , ajoutBudgetActivity.class);
+                startActivity(intentB);
+            }
+
+        });
     }
-}
+
+    }
