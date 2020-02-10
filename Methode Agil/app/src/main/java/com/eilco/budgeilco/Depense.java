@@ -2,20 +2,20 @@ package com.eilco.budgeilco;
 
 public class Depense {
 
-    private double montant;
+    private String montant;
 
     private Categorie categorie;
 
-    public Depense(double montant, Categorie categorie) {
+    public Depense(String montant, Categorie categorie) {
         this.montant = montant;
         this.categorie = categorie;
     }
 
-    public double getMontant() {
+    public String getMontant() {
         return montant;
     }
 
-    public void setMontant(double montant) {
+    public void setMontant(String montant) {
         this.montant = montant;
     }
 

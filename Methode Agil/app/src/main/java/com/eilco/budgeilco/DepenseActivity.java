@@ -21,7 +21,7 @@ public class DepenseActivity extends AppCompatActivity {
 
         String montant =  getIntent().getStringExtra("montant");
 
-        Depense depense = new Depense(Double.valueOf(montant), null);
+        Depense depense = new Depense(montant, null);
 
         List<Depense> depenseList = new ArrayList<>();
 

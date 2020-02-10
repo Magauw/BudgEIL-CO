@@ -26,20 +26,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         budgetValue = findViewById(R.id.textViewValueB);
 
+
+        String depense = getIntent().getStringExtra("montant");
+
         //Definition des catégorie
-        Categorie cat1 = new Categorie("Alimentation",0.0);
-        Categorie cat2 = new Categorie("Loyer",0.0);
+        Categorie cat1 = new Categorie("Alimentation","0.0");
+       /* Categorie cat2 = new Categorie("Loyer",0.0);
         Categorie cat3 = new Categorie("Loisir",0.0);
 
         List<Categorie> categorieList = new ArrayList<>();
 
         categorieList.add(cat1);
         categorieList.add(cat2);
-        categorieList.add(cat3);
+        categorieList.add(cat3);*/
+
+      // double dep = Double.valueOf(depense);
+        Depense depense1 = new Depense(depense,cat1);
+       List<Depense> depenseList= new ArrayList<>();
+       depenseList.add(depense1);
+
         //Definition de l'adapter recycler view
         RecyclerView myRecyclerView = findViewById(R.id.myRecyclerViewB);
         myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        myRecyclerView.setAdapter( new CategorieAdapter(categorieList));
+        myRecyclerView.setAdapter( new DepenseAdapter(depenseList));
 
         String Budget =  getIntent().getStringExtra("montantB");
         budgetValue.setText(Budget);
