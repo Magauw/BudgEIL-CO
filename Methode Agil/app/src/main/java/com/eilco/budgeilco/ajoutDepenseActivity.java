@@ -15,6 +15,8 @@ public class ajoutDepenseActivity extends AppCompatActivity  {
 
     public EditText montant ;
 
+    public EditText cat ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,13 +24,16 @@ public class ajoutDepenseActivity extends AppCompatActivity  {
 
         this.ajoutBouton = findViewById(R.id.buttonAjoutD);
         this.montant = findViewById(R.id.editTextMontantD);
+        this.cat = findViewById(R.id.editTextCatD);
 
         ajoutBouton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String montantSaisi = montant.getText().toString();
+                String catSaisi = cat.getText().toString();
                 Intent intent = new Intent(getApplicationContext() , DepenseActivity.class);
                 intent.putExtra("montant", montantSaisi);
+                intent.putExtra("catD", catSaisi );
                 startActivity(intent);
             }
         });

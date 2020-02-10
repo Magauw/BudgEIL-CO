@@ -20,8 +20,10 @@ public class DepenseActivity extends AppCompatActivity {
 
 
         String montant =  getIntent().getStringExtra("montant");
+        String cat  = getIntent().getStringExtra("catD");
+        Categorie cat1 = new Categorie(cat);
 
-        Depense depense = new Depense(montant, null);
+        Depense depense = new Depense(montant, cat1);
 
         List<Depense> depenseList = new ArrayList<>();
 

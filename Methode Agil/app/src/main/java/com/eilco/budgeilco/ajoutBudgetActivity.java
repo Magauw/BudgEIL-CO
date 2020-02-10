@@ -24,8 +24,9 @@ public class ajoutBudgetActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                String BudgetSaisi= montantBudget.getText().toString();
-                Intent intent = new Intent(getApplicationContext() , MainActivity.class);
+                Intent intent = new Intent(getApplicationContext() , DepenseActivity.class);
                 intent.putExtra("montantB", BudgetSaisi);
+
                 startActivity(intent);
             }
         });

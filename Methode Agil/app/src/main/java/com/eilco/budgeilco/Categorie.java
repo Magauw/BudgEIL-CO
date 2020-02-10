@@ -11,6 +11,10 @@ public class Categorie {
         this.montantTotal = montantTotal;
     }
 
+    public Categorie(String nom) {
+        this.nom = nom;
+    }
+
     public String getNom() {
         return nom;
     }
