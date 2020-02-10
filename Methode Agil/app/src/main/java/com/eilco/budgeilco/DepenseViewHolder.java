@@ -17,10 +17,9 @@ public class DepenseViewHolder extends RecyclerView.ViewHolder {
         mMontant = itemView.findViewById(R.id.textViewMont);
         mCategorie = itemView.findViewById(R.id.textViewCat);
     }
-    void display(Depense depense) {
+    void display(Depense depense){
         mMontant.setText(depense.getMontant() + "€");
-
-            mCategorie.setText(depense.getCategorie().getNom());
-
+        mCategorie.setText(depense.getCategorie().getNom());
     }
+
 }

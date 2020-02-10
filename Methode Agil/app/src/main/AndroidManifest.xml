@@ -12,7 +12,6 @@
         <activity android:name=".DepenseActivity"></activity>
         <activity android:name=".ajoutDepenseActivity" />
         <activity android:name=".ajoutBudgetActivity" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

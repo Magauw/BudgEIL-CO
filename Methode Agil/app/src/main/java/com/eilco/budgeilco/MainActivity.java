@@ -15,51 +15,42 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Depense depenses;
+
     private List<Categorie> categorieList ;
     private TextView budgetValue;
     private Button ajoutDep;
     private Button ajoutBud;
-    List<Depense> depenseList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         budgetValue = findViewById(R.id.textViewValueB);
 
-
-        String depense = getIntent().getStringExtra("montant");
-
         //Definition des catégorie
-        Categorie cat1 = new Categorie("Alimentation","0.0");
-       /* Categorie cat2 = new Categorie("Loyer",0.0);
-        Categorie cat3 = new Categorie("Loisir",0.0);
+        Categorie cat1 = new Categorie("Alimentation");
+        Categorie cat2 = new Categorie("Loyer");
+        Categorie cat3 = new Categorie("Loisir");
 
         List<Categorie> categorieList = new ArrayList<>();
 
-        categorieList.add(cat1);
+       categorieList.add(cat1);
         categorieList.add(cat2);
-        categorieList.add(cat3);*/
-
-      // double dep = Double.valueOf(depense);
-        Depense depense1 = new Depense(depense, cat1);
-        ajoutdep(depense1);
-
+        categorieList.add(cat3);
         //Definition de l'adapter recycler view
         RecyclerView myRecyclerView = findViewById(R.id.myRecyclerViewB);
         myRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        myRecyclerView.setAdapter( new DepenseAdapter(depenseList));
+        myRecyclerView.setAdapter( new CategorieAdapter(categorieList));
 
-        String Budget =  getIntent().getStringExtra("montantB");
-        budgetValue.setText(Budget);
-        //list
+      /*  String Budget =  getIntent().getStringExtra("montantB");
+        budgetValue.setText(Budget);*/
 
         //Definition du bouton ajout dépenses
         ajoutDep=findViewById(R.id.buttonAjoutD);
         ajoutDep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentD = new Intent(getApplicationContext() , ajoutDepenseActivity.class);
+                Intent intentD = new Intent(getApplicationContext() , DepenseActivity.class);
                 startActivity(intentD);
             }
     });
@@ -74,8 +65,5 @@ public class MainActivity extends AppCompatActivity {
 
         });
     }
-    public void ajoutdep(Depense depenses)
-    {
-        depenseList.add(depenses);
-    }
+
     }

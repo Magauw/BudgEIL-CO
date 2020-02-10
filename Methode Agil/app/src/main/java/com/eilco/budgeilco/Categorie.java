@@ -4,15 +4,11 @@ public class Categorie {
 
     private String nom;
 
-    private String montantTotal;
-
-    public Categorie(String nom, String montantTotal) {
-        this.nom = nom;
-        this.montantTotal = montantTotal;
-    }
+    //private Double montantTotal;
 
     public Categorie(String nom) {
         this.nom = nom;
+       // this.montantTotal = montantTotal;
     }
 
     public String getNom() {
@@ -23,11 +19,11 @@ public class Categorie {
         this.nom = nom;
     }
 
-    public String getMontantTotal() {
+  /* public Double getMontantTotal() {
         return montantTotal;
     }
 
-    public void setMontantTotal(String montantTotal) {
-        this.montantTotal = montantTotal;
-    }
+    public void setMontantTotal(Double montantTotal) {
+        this.montantTotal = montantTotal;*
+    }*/
 }

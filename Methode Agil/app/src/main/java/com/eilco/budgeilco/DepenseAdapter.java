@@ -11,7 +11,7 @@ import java.util.List;
 
 public class DepenseAdapter  extends RecyclerView.Adapter<DepenseViewHolder>  {
 
-    private List<Depense> depenseList;
+    public List<Depense> depenseList;
     public DepenseAdapter(List<Depense> depenseList) {
         this.depenseList = depenseList;
     }

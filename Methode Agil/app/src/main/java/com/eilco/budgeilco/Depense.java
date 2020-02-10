@@ -1,25 +1,21 @@
 package com.eilco.budgeilco;
 
-import java.util.List;
-
 public class Depense {
 
-    private String montant;
+    private double montant;
 
     private Categorie categorie;
 
-
-
-    public Depense(String montant, Categorie categorie) {
+    public Depense(double montant, Categorie categorie) {
         this.montant = montant;
         this.categorie = categorie;
     }
 
-    public String getMontant() {
+    public double getMontant() {
         return montant;
     }
 
-    public void setMontant(String montant) {
+    public void setMontant(double montant) {
         this.montant = montant;
     }
 

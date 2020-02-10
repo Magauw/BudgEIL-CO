@@ -1,31 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DepenseActivity">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="139dp"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myRec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="276dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="0dp">
 
-        android:text="Ajouter depense" />
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+
+        android:id="@+id/addB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="Ajouter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_weight="1"
+        android:id="@+id/depenseEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginBottom="80dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/addB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myRec"
+        app:layout_constraintVertical_bias="0.925" />
+
+    <EditText
+        android:id="@+id/editTextdepnom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/myRecyclerView"
-        android:layout_width="wrap_content"
-        android:layout_height="489dp"
-        android:scrollbars="vertical" />
-
-</LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/depenseEditText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

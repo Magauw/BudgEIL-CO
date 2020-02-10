@@ -20,35 +20,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <EditText
         android:id="@+id/editTextMontantD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitre" />
 
-    <EditText
-        android:id="@+id/editTextCatD"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginTop="88dp"
-        android:ems="10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextMontantD" />
-
     <Button
         android:id="@+id/buttonAjoutD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="120dp"
         android:layout_marginRight="120dp"
         android:text="Ajouter"
@@ -64,6 +52,5 @@
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/editTextMontantD"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitre" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

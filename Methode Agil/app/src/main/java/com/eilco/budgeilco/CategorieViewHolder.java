@@ -20,6 +20,6 @@ public class CategorieViewHolder extends RecyclerView.ViewHolder {
     }
     void display(Categorie categorie){
         mNom.setText(categorie.getNom());
-        mMontantTotal.setText(categorie.getMontantTotal().toString());
+        //mMontantTotal.setText(categorie.getMontantTotal().toString());
     }
 }

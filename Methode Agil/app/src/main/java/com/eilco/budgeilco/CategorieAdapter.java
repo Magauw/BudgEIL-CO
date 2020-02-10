@@ -11,7 +11,7 @@ import java.util.List;
 
 public class CategorieAdapter extends RecyclerView.Adapter<CategorieViewHolder>{
 
-    private List<Categorie> CategorieList;
+    public List<Categorie> CategorieList;
     public CategorieAdapter(List<Categorie> CategorieList) {
         this.CategorieList = CategorieList;
     }
