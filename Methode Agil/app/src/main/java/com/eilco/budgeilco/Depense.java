@@ -1,10 +1,14 @@
 package com.eilco.budgeilco;
 
+import java.util.List;
+
 public class Depense {
 
     private String montant;
 
     private Categorie categorie;
+
+
 
     public Depense(String montant, Categorie categorie) {
         this.montant = montant;

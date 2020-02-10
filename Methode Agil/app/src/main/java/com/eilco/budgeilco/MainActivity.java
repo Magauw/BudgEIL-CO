@@ -15,11 +15,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private Depense depenses;
     private List<Categorie> categorieList ;
     private TextView budgetValue;
     private Button ajoutDep;
     private Button ajoutBud;
+    List<Depense> depenseList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +42,8 @@ public class MainActivity extends AppCompatActivity {
         categorieList.add(cat3);*/
 
       // double dep = Double.valueOf(depense);
-        Depense depense1 = new Depense(depense,cat1);
-       List<Depense> depenseList= new ArrayList<>();
-       depenseList.add(depense1);
+        Depense depense1 = new Depense(depense, cat1);
+        ajoutdep(depense1);
 
         //Definition de l'adapter recycler view
         RecyclerView myRecyclerView = findViewById(R.id.myRecyclerViewB);
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         String Budget =  getIntent().getStringExtra("montantB");
         budgetValue.setText(Budget);
+        //list
 
         //Definition du bouton ajout dépenses
         ajoutDep=findViewById(R.id.buttonAjoutD);
@@ -73,5 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
         });
     }
-
+    public void ajoutdep(Depense depenses)
+    {
+        depenseList.add(depenses);
+    }
     }
