@@ -26,10 +26,12 @@ public class ajoutDepenseActivity extends AppCompatActivity  {
         ajoutBouton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Integer position = Integer.parseInt(getIntent().getStringExtra("position"));
                 String montantSaisi = montant.getText().toString();
                 Intent intent = new Intent(getApplicationContext() , DepenseActivity.class);
                 intent.putExtra("montant", montantSaisi);
                 startActivity(intent);
+
             }
         });
 

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">budgEIL&amp;CO</string>
+    <string-array name="categorie">
+        <item>Loyer</item>
+        <item>Transport</item>
+        <item>Alimentation</item>
+        <item>Impots</item>
+    </string-array>
+
 </resources>
